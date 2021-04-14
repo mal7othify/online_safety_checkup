@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:online_safety_checkup/quiz.dart';
-import 'package:online_safety_checkup/result.dart';
-
-import 'questions_const.dart';
 
 void main() => runApp(MyApp());
 
