@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
-  final Function resetHandler;
+  final Function() resetHandler;
 
-  Result(this.resultScore, this.resetHandler);
+  const Result({required this.resultScore, required this.resetHandler});
 
   String get resultPhrase {
     String resultText;
@@ -21,28 +21,43 @@ class Result extends StatelessWidget {
     return resultText;
   }
 
+  Color get resultColor {
+    if (100 >= resultScore && resultScore >= 90) {
+      return Colors.greenAccent;
+    } else if (89 >= resultScore && resultScore >= 80) {
+      return Colors.orangeAccent;
+    } else if (79 >= resultScore && resultScore >= 70) {
+     return Colors.orangeAccent;
+    } else if (69 >= resultScore && resultScore >= 60) {
+     return Colors.orangeAccent;
+    } else
+    {return Colors.red;}
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
             '$resultScore %',
-            style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold, color: resultColor),
             textAlign: TextAlign.center,
           ),
+          SizedBox(height: 20),
           Text(
             resultPhrase,
-            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
+          SizedBox(height: 50),
           TextButton(
-            style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all(Colors.blue)),
+            style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.blue)),
             child: Text(
               'Restart Quiz!',
             ),
-            onPressed: resetHandler(),
+            onPressed:() => resetHandler(),
           ),
         ],
       ),
