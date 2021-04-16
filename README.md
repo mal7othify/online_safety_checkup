@@ -1,16 +1,10 @@
-# online_safety_checkup
+# Online Safety Checkup
 
-A new Flutter project.
+## :scroll: Description
 
-## Getting Started
+A Flutter application to show your safety online based on a series of questions.
 
-This project is a starting point for a Flutter application.
+## :camera_flash: Screenshots
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Overview
+<img src="/results/androidoverview.gif" width="260">&emsp;<img src="/results/iosoverview.gif" width="260">
